@@ -76,7 +76,25 @@ btn.textContent= 'Get Started';
 
 // * Section 'Main-Content' *  Top Content / Middle Img / Bottom Content
 
-const topContent= document.querySelector('.top-content');
+const txtContent= document.querySelectorAll('.text-content');
 
-topContent.style.display= 'flex';
+console.log(txtContent);
 
+/ * Top Content * / 
+
+txtContent[0].textContent= 'Services aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+txtContent[1].textContent= 'Product aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+/ * Middle Img * /
+
+const middleImg= document.querySelector('#middle-img');
+
+middleImg.src= 'img/mid-page-accent.jpg';
+
+// Bottom Content /
+
+const flexBottom= document.querySelector('.bottom-content');
+
+txtContent[2].textContent= 'Vision aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+txtContent[3].textContent= 'Features aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+txtContent[4].textContent= 'About aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
