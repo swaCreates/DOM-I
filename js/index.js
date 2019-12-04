@@ -39,6 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
+
 // * Header *  Nav / Anchor / Logo
 
 let logo = document.getElementById("logo-img");
@@ -53,6 +54,7 @@ anchorTitles[3].textContent= 'Features';
 anchorTitles[4].textContent= 'About';
 anchorTitles[5].textContent= 'Contact';
 
+
 // * Section *  H1 / Button / Code Snippet IMG 
 
 const ctaImg= document.querySelector('#cta-img');
@@ -62,3 +64,19 @@ ctaImg.src= 'img/header-img.png';
 const h1= document.querySelector('h1');
 
 h1.textContent= 'DOM IS AWESOME';
+
+// h1.style.justifyContent= 'center';
+// h1.style.border= '1px solid red';
+
+const btn= document.querySelector('button');
+
+btn.textContent= 'Get Started';
+
+
+
+// * Section 'Main-Content' *  Top Content / Middle Img / Bottom Content
+
+const topContent= document.querySelector('.top-content');
+
+topContent.style.display= 'flex';
+
