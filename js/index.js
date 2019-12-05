@@ -45,7 +45,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const anchorTitles= document.querySelectorAll('nav a');
+const anchorTitles= document.querySelectorAll('a');
 
 anchorTitles[0].textContent= 'Services';
 anchorTitles[1].textContent= 'Product';
@@ -53,6 +53,11 @@ anchorTitles[2].textContent= 'Vision';
 anchorTitles[3].textContent= 'Features';
 anchorTitles[4].textContent= 'About';
 anchorTitles[5].textContent= 'Contact';
+
+anchorTitles.forEach(function(item){
+  item.style.color= 'green';
+})
+
 
 
 // * Section *  H1 / Button / Code Snippet IMG 
@@ -80,10 +85,12 @@ const txtContent= document.querySelectorAll('.text-content');
 
 console.log(txtContent);
 
+
 / * Top Content * / 
 
-txtContent[0].textContent= 'Services aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-txtContent[1].textContent= 'Product aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+txtContent[0].textContent= "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+txtContent[1].textContent= "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
 
 / * Middle Img * /
 
@@ -91,10 +98,51 @@ const middleImg= document.querySelector('#middle-img');
 
 middleImg.src= 'img/mid-page-accent.jpg';
 
+
 // Bottom Content /
 
-const flexBottom= document.querySelector('.bottom-content');
+txtContent[2].textContent= "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+txtContent[3].textContent=  "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+txtContent[4].textContent= "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
 
-txtContent[2].textContent= 'Vision aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-txtContent[3].textContent= 'Features aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-txtContent[4].textContent= 'About aliquam elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+txtContent[2].style.marginRight= '10px';
+txtContent[3].style.marginRight= '10px';
+
+
+// * Contact Section * /
+
+const contactHeader= document.querySelector('.contact h4');
+
+contactHeader.textContent= 'Contact';
+
+const pTags= document.querySelectorAll('.contact p');
+
+pTags[0].textContent= '123 Way 456 Street Somewhere, USA';
+pTags[1].textContent= '1 (888) 888-8888';
+pTags[2].textContent= 'sales@greatidea.io';
+
+
+// * Footer * /
+
+const footerTxt= document.querySelector('footer p');
+
+footerTxt.textContent= 'Copyright Great Idea! 2018';
+
+
+// * New Elements *  /
+
+const oldNav= document.querySelector('nav');
+
+const lastAnchor= document.createElement('a');
+
+const firstAnchor= document.createElement('a');
+
+lastAnchor.textContent= 'Apply';
+lastAnchor.style.color= 'green';
+
+firstAnchor.textContent= 'Topics';
+firstAnchor.style.color= 'green';
+
+oldNav.appendChild(lastAnchor);
+
+oldNav.prepend(firstAnchor);
